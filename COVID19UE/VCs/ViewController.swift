@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TransfersViewController.swift
 //  COVID19UE
 //
 //  Created by Linus Geffarth on 24.03.20.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TransfersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
-
-
 }
 

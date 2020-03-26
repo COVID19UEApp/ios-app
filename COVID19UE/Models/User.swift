@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class User {
     
@@ -17,6 +18,8 @@ class User {
     var tmpPassword: String?
     
     var contact: Contact?
+    
+    var currentLocation: CLLocation?
     
     init(type: UserType, email: String) {
         self.type = type

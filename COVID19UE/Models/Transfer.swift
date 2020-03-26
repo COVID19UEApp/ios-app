@@ -1,5 +1,5 @@
 //
-//  Global.swift
+//  Transfer.swift
 //  COVID19UE
 //
 //  Created by Linus Geffarth on 26.03.20.
@@ -8,3 +8,8 @@
 
 import Foundation
 
+struct Transfer {
+    
+    var mandate: Mandate
+    var steps: [TransferStep] = []
+}

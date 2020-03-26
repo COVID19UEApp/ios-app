@@ -32,7 +32,7 @@ struct Address {
     }
     
     /// Returns the distance between given location (current user location by default) to this address' location in METERS.
-    func getDistance(from location: CLLocation? = currentUserLocation, _ completion: @escaping (Int?) -> Void) {
+    func getDistance(from location: CLLocation? = Account.current.user.currentLocation, _ completion: @escaping (Int?) -> Void) {
         getCoordinate { (location2) in
             guard let l1 = location, let l2 = location2 else {
                 completion(nil)

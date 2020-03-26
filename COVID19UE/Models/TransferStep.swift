@@ -9,9 +9,7 @@
 import Foundation
 
 struct TransferStep {
-    
-    var mandate: Mandate
-    
+        
     var index: Int
     var status: Status = .open
     var destination: Destination
