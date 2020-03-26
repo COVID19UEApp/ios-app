@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-COVID19UE/Pods-COVID19UE-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework
+${BUILT_PRODUCTS_DIR}/OverlayContainer/OverlayContainer.framework

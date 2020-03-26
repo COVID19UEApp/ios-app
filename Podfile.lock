@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (5.0.5)
+  - M13Checkbox (3.4.0)
+  - OverlayContainer (3.3.1)
 
 DEPENDENCIES:
   - Alamofire
+  - M13Checkbox
+  - OverlayContainer
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - M13Checkbox
+    - OverlayContainer
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  OverlayContainer: a4033b1fe603341ebafb38d6acac28af3a8fe7a7
 
-PODFILE CHECKSUM: 37bfbad2b8fa4520355b8570662e8cb23d758403
+PODFILE CHECKSUM: e8fbd1683e3722759cda04c300183c9b0f657d43
 
 COCOAPODS: 1.8.4

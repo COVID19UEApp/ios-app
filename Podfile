@@ -8,5 +8,7 @@ target 'COVID19UE' do
   # Pods for COVID19UE
 
   pod 'Alamofire'
+  pod 'M13Checkbox'
+  pod 'OverlayContainer'
 
 end
