@@ -10,17 +10,17 @@ import Foundation
 
 class Agent: User {
     
-    var type: AgentType
+    var serviceType: AgentServiceType
     
-    init(email: String, type: AgentType) {
-        self.type = type
+    init(email: String, serviceType: AgentServiceType) {
+        self.serviceType = serviceType
         
-        super.init(email: email)
+        super.init(type: .agent, email: email)
     }
 }
 
 extension Agent {
-    enum AgentType {
+    enum AgentServiceType {
         case hospital
         case retirementHome
         case mobileCareService

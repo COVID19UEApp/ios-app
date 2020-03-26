@@ -10,13 +10,22 @@ import Foundation
 
 class User {
     
+    var type: UserType
+    
     var email: String
     /// Temporary password used during signup
     var tmpPassword: String?
     
     var contact: Contact?
     
-    init(email: String) {
+    init(type: UserType, email: String) {
+        self.type = type
         self.email = email
+    }
+}
+
+extension User {
+    enum UserType {
+        case vendor, agent, authority
     }
 }

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q7S-jx-daX">
+                                <rect key="frame" x="72.5" y="205.5" width="269.5" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM1-ca-Rp2">
+                                        <rect key="frame" x="0.0" y="0.0" width="269.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Überführungs-App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad7-Ly-xsT">
+                                        <rect key="frame" x="0.0" y="41" width="269.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="yzn-62-om0">
+                                <rect key="frame" x="122.5" y="404" width="169" height="88"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjL-Gt-Hfq">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="88"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="future" translatesAutoresizingMaskIntoConstraints="NO" id="oMb-qC-9xW">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsM-92-Fo4">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="kBW-b7-4c6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Verlauf">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="oMb-qC-9xW" firstAttribute="centerX" secondItem="EjL-Gt-Hfq" secondAttribute="centerX" id="1Ch-17-0zx"/>
+                                            <constraint firstItem="wsM-92-Fo4" firstAttribute="top" secondItem="EjL-Gt-Hfq" secondAttribute="top" id="8bb-9S-erH"/>
+                                            <constraint firstAttribute="trailing" secondItem="wsM-92-Fo4" secondAttribute="trailing" id="HA7-f2-cPw"/>
+                                            <constraint firstAttribute="bottom" secondItem="wsM-92-Fo4" secondAttribute="bottom" id="OKD-yK-xKm"/>
+                                            <constraint firstItem="oMb-qC-9xW" firstAttribute="top" secondItem="EjL-Gt-Hfq" secondAttribute="top" id="n5S-Ao-aOc"/>
+                                            <constraint firstItem="wsM-92-Fo4" firstAttribute="leading" secondItem="EjL-Gt-Hfq" secondAttribute="leading" id="wIR-L7-ZvA"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RC2-W0-B7l">
+                                        <rect key="frame" x="113" y="0.0" width="56" height="88"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="track_order" translatesAutoresizingMaskIntoConstraints="NO" id="1NQ-tZ-Mal">
+                                                <rect key="frame" x="3" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0n-Qc-q3E">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="s7e-hL-hIS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Aufträge">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="f0n-Qc-q3E" firstAttribute="top" secondItem="RC2-W0-B7l" secondAttribute="top" id="2Sp-x9-L5V"/>
+                                            <constraint firstItem="f0n-Qc-q3E" firstAttribute="leading" secondItem="RC2-W0-B7l" secondAttribute="leading" id="Dp9-R7-OFr"/>
+                                            <constraint firstItem="1NQ-tZ-Mal" firstAttribute="centerX" secondItem="RC2-W0-B7l" secondAttribute="centerX" id="OnR-4A-hzo"/>
+                                            <constraint firstAttribute="trailing" secondItem="f0n-Qc-q3E" secondAttribute="trailing" id="SkE-v8-7v3"/>
+                                            <constraint firstAttribute="bottom" secondItem="f0n-Qc-q3E" secondAttribute="bottom" id="VpH-nh-zEg"/>
+                                            <constraint firstItem="1NQ-tZ-Mal" firstAttribute="top" secondItem="RC2-W0-B7l" secondAttribute="top" id="kxU-Ys-kat"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_wirvsvirus" translatesAutoresizingMaskIntoConstraints="NO" id="VxY-SS-NAt">
+                                <rect key="frame" x="122" y="808" width="170" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VxY-SS-NAt" secondAttribute="height" multiplier="85:21" id="a8k-nz-uBH"/>
+                                    <constraint firstAttribute="width" constant="170" id="czi-v8-l19"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VxY-SS-NAt" secondAttribute="bottom" constant="12" id="6uq-VA-sMu"/>
+                            <constraint firstItem="q7S-jx-daX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.55" id="QnI-sc-fdu"/>
+                            <constraint firstItem="VxY-SS-NAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vke-cQ-8ob"/>
+                            <constraint firstItem="q7S-jx-daX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zck-Q8-B4W"/>
+                            <constraint firstItem="yzn-62-om0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hKQ-ln-ONU"/>
+                            <constraint firstItem="yzn-62-om0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k2K-OP-U6B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="64" y="44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="future" width="50" height="50"/>
+        <image name="logo_wirvsvirus" width="1215" height="322"/>
+        <image name="track_order" width="50" height="50"/>
+    </resources>
+</document>

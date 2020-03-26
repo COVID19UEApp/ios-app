@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="URl-f5-tE2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Step1 View Controller-->
+        <scene sceneID="n5R-6i-N4U">
+            <objects>
+                <viewController id="q4O-UR-weS" customClass="LoginStep1ViewController" customModule="COVID19UE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdQ-bq-any">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmH-Wr-9y1">
+                                <rect key="frame" x="247" y="752" width="83" height="30"/>
+                                <state key="normal" title="Registrieren"/>
+                                <connections>
+                                    <action selector="register" destination="q4O-UR-weS" eventType="touchUpInside" id="CTV-lN-2ot"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-Qk-Ojo">
+                                <rect key="frame" x="99" y="752" width="68" height="30"/>
+                                <state key="normal" title="Einloggen"/>
+                                <connections>
+                                    <action selector="login" destination="q4O-UR-weS" eventType="touchUpInside" id="xFk-Xd-kR0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zDl-Qk-Ojo" firstAttribute="trailing" secondItem="rdQ-bq-any" secondAttribute="centerX" constant="-40" id="6vU-N0-aTa"/>
+                            <constraint firstItem="WmH-Wr-9y1" firstAttribute="leading" secondItem="rdQ-bq-any" secondAttribute="centerX" constant="40" id="GzS-J8-ZCy"/>
+                            <constraint firstItem="WmH-Wr-9y1" firstAttribute="centerY" secondItem="zDl-Qk-Ojo" secondAttribute="centerY" id="aNK-ZJ-9t8"/>
+                            <constraint firstItem="d1I-Gd-bWr" firstAttribute="bottom" secondItem="zDl-Qk-Ojo" secondAttribute="bottom" constant="80" id="xIT-Rk-oWS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d1I-Gd-bWr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tiv-69-Dow"/>
+                    <connections>
+                        <segue destination="pfP-9E-Od9" kind="show" identifier="Login_to_Vendor" id="aKc-wp-55V"/>
+                        <segue destination="JpA-sK-qbf" kind="show" identifier="Login_to_Agent" id="UgA-qJ-AzN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaI-gq-kDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1976.8115942028987" y="-1533.4821428571429"/>
+        </scene>
+        <!--Agent-->
+        <scene sceneID="PTq-wF-JcC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Agent" id="JpA-sK-qbf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OTT-VD-Qc5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRf-SL-VBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1265.217391304348" y="-1566.2946428571429"/>
+        </scene>
+        <!--Vendor-->
+        <scene sceneID="XAj-kS-Fgd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Vendor" id="pfP-9E-Od9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xfp-jK-ehA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sef-67-Evo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1257.9710144927537" y="-1526.1160714285713"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LqE-Zv-EGa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="URl-f5-tE2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h2M-z4-ofe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q4O-UR-weS" kind="relationship" relationship="rootViewController" id="bYk-LS-2Q3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUJ-8i-FE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2886.9565217391305" y="-1533.4821428571429"/>
+        </scene>
+    </scenes>
+</document>

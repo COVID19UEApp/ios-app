@@ -10,11 +10,17 @@ import Foundation
 
 class Vendor: User {
     
-    var type: VendorType = .transferrer
+    var serviceType: VendorServiceType = .transferrer
+    
+    init(email: String, serviceType: VendorServiceType = .transferrer) {
+        self.serviceType = serviceType
+        
+        super.init(type: .vendor, email: email)
+    }
 }
 
 extension Vendor {
-    enum VendorType {
+    enum VendorServiceType {
         case transferrer
     }
 }
