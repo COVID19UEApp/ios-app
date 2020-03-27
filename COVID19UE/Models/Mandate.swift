@@ -10,11 +10,21 @@ import Foundation
 
 struct Mandate {
     
-    var deceasedName: (first: String, last: String)
+    var deceased: Deceased
     
     var contact: Contact?
+        
+    init(deceased: Deceased) {
+        self.deceased = deceased
+    }
+}
+
+struct Deceased {
+    var name: Name
+    var birthDate: Date?
     
-    init(deceasedName: (String, String)) {
-        self.deceasedName = deceasedName
+    var infectiousDisease: String?
+    var isContagious: Bool {
+        return infectiousDisease?.nonEmpty != nil
     }
 }

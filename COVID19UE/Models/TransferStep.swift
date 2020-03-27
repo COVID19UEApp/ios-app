@@ -32,6 +32,7 @@ extension TransferStep.Destination {
         case funeralHome
         case cooling
         case pathology
+        case crematory
         case finalRestingPlace
         
         case other

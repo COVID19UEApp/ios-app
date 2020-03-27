@@ -3,10 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Italic.ttf">
+            <string>OpenSans-Italic</string>
+        </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans</string>
         </array>
@@ -18,7 +22,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -62,7 +65,7 @@
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Verlauf">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleColor" name="Text"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="cOo-RV-FV2" kind="show" id="z1t-N6-wYr"/>
@@ -96,7 +99,7 @@
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                 <inset key="contentEdgeInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Aufträge">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleColor" name="Text"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="PAF-Ll-His" kind="show" id="cms-l5-F4Z"/>
@@ -139,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hDN-IM-el0"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971.01449275362324" y="55.580357142857139"/>
         </scene>
@@ -194,7 +198,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Hqc-YQ-ZUc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sp0-5A-kuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qxe-1s-Svd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="49h-rK-LfX">
@@ -205,6 +208,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iqt-FU-xSb"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sp0-5A-kuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="55.580357142857139"/>
         </scene>
@@ -255,28 +259,87 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="systemMaterialLight"/>
+                                <blurEffect style="systemMaterial"/>
                             </visualEffectView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zzq-Kq-xFV">
-                                <rect key="frame" x="0.0" y="52" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="58" width="414" height="442"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SWp-Nf-t1B" customClass="TransferMenuCell" customModule="COVID19UE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SWp-Nf-t1B" id="K5y-mr-dwt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me6-Si-SIC">
-                                                    <rect key="frame" x="30" y="24.5" width="6.5" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DO0-85-Qha">
+                                                    <rect key="frame" x="20" y="16" width="374" height="88.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-MP-Boa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abholung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI8-tO-NpC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="23.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="in 245m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-ve-igs">
+                                                                    <rect key="frame" x="317" y="0.0" width="57" height="23.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0ht-xE-CGd">
+                                                            <rect key="frame" x="0.0" y="27.5" width="374" height="61"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luna Kingsley, 10.03.1964" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gou-TC-BgV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-lP-vXX">
+                                                                    <rect key="frame" x="0.0" y="31.5" width="374" height="29.5"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="exclamationmark.triangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Ve-Yr-Nit">
+                                                                            <rect key="frame" x="0.0" y="5.5" width="20" height="18"/>
+                                                                            <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="20" id="75w-0V-BRJ"/>
+                                                                                <constraint firstAttribute="width" secondItem="5Ve-Yr-Nit" secondAttribute="height" multiplier="1:1" id="cWg-Rw-pAC"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jb-Q3-Dsr">
+                                                                            <rect key="frame" x="28" y="0.5" width="346" height="29"/>
+                                                                            <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="15"/>
+                                                                            <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                                                                            <state key="normal" title="Hinweise beachten">
+                                                                                <color key="titleColor" name="Text"/>
+                                                                            </state>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DO0-85-Qha" firstAttribute="leading" secondItem="K5y-mr-dwt" secondAttribute="leadingMargin" id="7fT-y8-khd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DO0-85-Qha" secondAttribute="trailing" id="Jic-3A-Iay"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DO0-85-Qha" secondAttribute="bottom" constant="5" id="Rdr-25-5C4"/>
+                                                <constraint firstItem="DO0-85-Qha" firstAttribute="top" secondItem="K5y-mr-dwt" secondAttribute="topMargin" constant="5" id="UES-5j-kKB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="deceasedLabel" destination="gou-TC-BgV" id="8Na-6f-UZa"/>
+                                            <outlet property="distanceLabel" destination="Vdi-ve-igs" id="laK-Lz-x1O"/>
+                                            <outlet property="warningView" destination="CPz-lP-vXX" id="pi9-fT-arZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -285,11 +348,11 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-rp-Yj7" userLabel="Header">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auftrag auswählen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMl-Hp-Jee">
-                                        <rect key="frame" x="20" y="16" width="141.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <rect key="frame" x="16" y="16" width="173" height="26"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -298,8 +361,8 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="RMl-Hp-Jee" secondAttribute="bottom" constant="16" id="8Ud-Xj-gdt"/>
                                     <constraint firstItem="RMl-Hp-Jee" firstAttribute="top" secondItem="cKQ-rp-Yj7" secondAttribute="top" constant="16" id="Klf-Wo-TYr"/>
-                                    <constraint firstItem="RMl-Hp-Jee" firstAttribute="leading" secondItem="cKQ-rp-Yj7" secondAttribute="leading" constant="20" id="P9j-Mt-SRW"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RMl-Hp-Jee" secondAttribute="trailing" constant="20" id="zgC-IO-eIe"/>
+                                    <constraint firstItem="RMl-Hp-Jee" firstAttribute="leading" secondItem="cKQ-rp-Yj7" secondAttribute="leading" constant="16" id="P9j-Mt-SRW"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RMl-Hp-Jee" secondAttribute="trailing" constant="16" id="zgC-IO-eIe"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -330,8 +393,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="exclamationmark.triangle.fill" catalog="system" width="128" height="112"/>
         <image name="future" width="50" height="50"/>
         <image name="logo_wirvsvirus" width="1215" height="322"/>
         <image name="track_order" width="50" height="50"/>
+        <namedColor name="Text">
+            <color white="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
     </resources>
 </document>

@@ -13,19 +13,21 @@ class TransfersViewController: UIViewController {
     
     @IBOutlet weak var overlayContainerView: UIView!
     let overlayController = OverlayContainerViewController(style: .flexibleHeight)
-    let mapViewController = viewController(withID: "MapViewController", from: "Vendor") as? MapViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let menuVC = viewController(withID: "TransfersMenuViewController", from: "Vendor") as? TransfersMenuViewController else { return }
+        guard
+            let mapViewController = viewController(withID: "MapViewController", from: "Vendor") as? MapViewController,
+            let menuVC = viewController(withID: "TransfersMenuViewController", from: "Vendor") as? TransfersMenuViewController else { return }
         overlayController.delegate = self
         overlayController.viewControllers = [menuVC]
         addChild(overlayController, in: view)
-        if mapViewController != nil {
-            addChild(mapViewController!, in: overlayContainerView)
-        }
+        addChild(mapViewController, in: overlayContainerView)
         
+        menuVC.showOnMap = { transfers in
+            mapViewController.showOnMap(transfers)
+        }
 //        menuVC.shouldSegueToJobSummary = { job in
 //            self.performSegue(withIdentifier: "Main_to_JobSummary", sender: job)
 //        }

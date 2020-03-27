@@ -11,5 +11,6 @@ import Foundation
 struct Transfer {
     
     var mandate: Mandate
+    var pickup: Address
     var steps: [TransferStep] = []
 }

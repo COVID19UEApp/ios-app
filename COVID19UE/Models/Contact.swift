@@ -9,7 +9,18 @@
 import Foundation
 
 struct Contact {
-    var name: (first: String, last: String)
+    var name: Name
     var phone: String?
     var email: String?
+}
+
+struct Name {
+    var salutation: String?
+    var first: String
+    var last: String
+    var maiden: String?
+    
+    var full: String {
+        first + " " + last
+    }
 }

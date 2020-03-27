@@ -25,6 +25,11 @@ extension UIView {
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -insets.right).isActive = true
         }
     }
+    
+    var isShown: Bool {
+        get { !isHidden }
+        set { isHidden = !newValue }
+    }
 }
 
 extension UIViewController {
@@ -62,5 +67,19 @@ extension Collection where Indices.Iterator.Element == Index {
 extension Array {
     var nonEmpty: Array? {
         return self.count > 0 ? self : nil
+    }
+}
+
+extension String {
+    var nonEmpty: String? {
+        return self == "" ? nil : self
+    }
+}
+
+extension Date {
+    func string(withFormat format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        return formatter.string(from: self)
     }
 }

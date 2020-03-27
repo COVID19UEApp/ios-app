@@ -13,9 +13,13 @@ class TransfersMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let mandate1 = Mandate(deceased: Deceased(name: Name(first: "Luna", last: "Kingsley"), birthDate: Date(), infectiousDisease: "COVID-19"))
+    let mandate2 = Mandate(deceased: Deceased(name: Name(first: "Peter", last: "Müller"), birthDate: Date()))
     var transfers: [Transfer] = []
     
     var locationManager: CLLocationManager!
+    
+    var showOnMap: (_ transfers: [Transfer]) -> Void = { _ in }
     
 //    var shouldSegueToTransferSummary: (_ transfer: Transfer) -> Void = { _ in }
     
@@ -35,7 +39,19 @@ extension TransfersMenuViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 //        guard let location = locations.last else { return }
 //        let userLocation = location.coordinate
-        // TODO: get transfers close by
+        
+        transfers = [
+            Transfer(mandate: mandate1, pickup: Address(street: "Reilstr.", house: "128", zip: "06114", city: "Halle", country: "Deutschland"), steps: [
+                TransferStep(index: 0, status: .open, destination: TransferStep.Destination(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+            ]),
+            Transfer(mandate: mandate2, pickup: Address(street: "Trothaer Str.", house: "9", zip: "06118", city: "Halle", country: "Deutschland"), steps: [
+                TransferStep(index: 0, status: .open, destination: TransferStep.Destination(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+            ])
+        ]
+        showOnMap(transfers)
+        tableView.reloadData()
     }
 }
 
@@ -63,26 +79,26 @@ extension TransfersMenuViewController: UITableViewDataSource, UITableViewDelegat
 
 class TransferMenuCell: UITableViewCell {
     
-    @IBOutlet weak var indexLabel: UILabel!
-    @IBOutlet weak var flagIcon: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var deceasedLabel: UILabel!
+    @IBOutlet weak var warningView: UIStackView!
     
     var transfer: Transfer!
     
     func populate(for transfer: Transfer) {
         self.transfer = transfer
         
+        deceasedLabel.text = transfer.mandate.deceased.name.full + ", " + (transfer.mandate.deceased.birthDate?.string(withFormat: "dd.MM.yyyy") ?? "")
+        warningView.isShown = transfer.mandate.deceased.isContagious
         
-        transfer.steps.first?.destination.address.getDistance { (distance) in
+        transfer.pickup.getDistance { (distance) in
             guard let distance = distance else { return }
             switch distance {
             case 0...999:
                 self.distanceLabel.text = "\(distance) m"
             default:
-                let kmDistance = distance / 1000
-                self.distanceLabel.text = "\(kmDistance) km"
+                let kmDistance = Float(distance) / 1000
+                self.distanceLabel.text = String(format: "%.2f km", kmDistance)
             }
         }
     }
