@@ -20,6 +20,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     /// Determines whether the region has been set for the first time.
     var hasSetRegion: Bool = false
     
+    var shouldShowTransferDetails: (_ transfer: Transfer) -> Void = { _ in }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,6 +81,11 @@ extension MapViewController: MKMapViewDelegate {
             return MKTileOverlayRenderer(tileOverlay: tileOverlay)
         }
         return MKOverlayRenderer(overlay: overlay)
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let transfer = (view as? TransferAnnotationView)?.transfer else { return }
+        shouldShowTransferDetails(transfer)
     }
 }
 

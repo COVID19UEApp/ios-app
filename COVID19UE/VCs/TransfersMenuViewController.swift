@@ -21,8 +21,8 @@ class TransfersMenuViewController: UIViewController {
     
     var showOnMap: (_ transfers: [Transfer]) -> Void = { _ in }
     
-//    var shouldSegueToTransferSummary: (_ transfer: Transfer) -> Void = { _ in }
-    
+    var shouldShowTransferDetails: (_ transfer: Transfer) -> Void = { _ in }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,13 +41,17 @@ extension TransfersMenuViewController: CLLocationManagerDelegate {
 //        let userLocation = location.coordinate
         
         transfers = [
-            Transfer(mandate: mandate1, pickup: Address(street: "Reilstr.", house: "128", zip: "06114", city: "Halle", country: "Deutschland"), steps: [
-                TransferStep(index: 0, status: .open, destination: TransferStep.Destination(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
-                TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+            Transfer(mandate: mandate1,
+                     pickup: Pickup(location: Location(type: .deathplace, address: Address(street: "Reilstr.", house: "128", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                     steps: [
+                TransferStep(index: 0, status: .open, destination: Location(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: Location(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
             ]),
-            Transfer(mandate: mandate2, pickup: Address(street: "Trothaer Str.", house: "9", zip: "06118", city: "Halle", country: "Deutschland"), steps: [
-                TransferStep(index: 0, status: .open, destination: TransferStep.Destination(type: .cooling, address: Address(street: "Blumenstr.", house: "19", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
-                TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Mühlweg", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+            Transfer(mandate: mandate2,
+                     pickup: Pickup(location: Location(type: .deathplace, address: Address(street: "Trothaer Str.", house: "9", zip: "06118", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                     steps: [
+                TransferStep(index: 0, status: .open, destination: Location(type: .cooling, address: Address(street: "Blumenstr.", house: "19", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: Location(type: .crematory, address: Address(street: "Mühlweg", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
             ])
         ]
         showOnMap(transfers)
@@ -72,8 +76,8 @@ extension TransfersMenuViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.setSelected(false, animated: true)
-//        guard let transfer = (cell as? TransferMenuCell)?.transfer else { return }
-//        shouldSegueToTransferSummary(transfer)
+        guard let transfer = (cell as? TransferMenuCell)?.transfer else { return }
+        shouldShowTransferDetails(transfer)
     }
 }
 

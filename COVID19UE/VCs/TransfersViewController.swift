@@ -18,30 +18,29 @@ class TransfersViewController: UIViewController {
         super.viewDidLoad()
         
         guard
-            let mapViewController = viewController(withID: "MapViewController", from: "Vendor") as? MapViewController,
+            let mapVC = viewController(withID: "MapViewController", from: "Vendor") as? MapViewController,
             let menuVC = viewController(withID: "TransfersMenuViewController", from: "Vendor") as? TransfersMenuViewController else { return }
         overlayController.delegate = self
         overlayController.viewControllers = [menuVC]
         addChild(overlayController, in: view)
-        addChild(mapViewController, in: overlayContainerView)
-        
-        menuVC.showOnMap = { transfers in
-            mapViewController.showOnMap(transfers)
+        addChild(mapVC, in: overlayContainerView)
+                
+        let shouldShowTransferDetails = { transfer in
+            self.performSegue(withIdentifier: "Transfers_to_TransferDetails", sender: transfer)
         }
-//        menuVC.shouldSegueToJobSummary = { job in
-//            self.performSegue(withIdentifier: "Main_to_JobSummary", sender: job)
-//        }
+        mapVC.shouldShowTransferDetails = shouldShowTransferDetails
+        menuVC.shouldShowTransferDetails = shouldShowTransferDetails
+        menuVC.showOnMap = { transfers in
+            mapVC.showOnMap(transfers)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-//        if
-//            let nav = segue.destination as? UINavigationController,
-//            let dest = nav.viewControllers.first as? JobSummaryViewController,
-//            let job = sender as? Job {
-//            dest.job = job
-//        }
+        if let transfer = sender as? Transfer, let dest = segue.destination as? TransferDetailsViewController {
+            dest.transfer = transfer
+        }
     }
 }
 

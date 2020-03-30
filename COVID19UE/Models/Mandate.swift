@@ -25,6 +25,16 @@ struct Deceased {
     
     var infectiousDisease: String?
     var isContagious: Bool {
-        return infectiousDisease?.nonEmpty != nil
+        infectiousDisease?.nonEmpty != nil
+    }
+    
+    var weight: Float?
+    var hasOverweight: Bool {
+        weight != nil
+    }
+    var height: Float?
+    var width: Float?
+    var hasOversize: Bool {
+        height != nil || width != nil
     }
 }

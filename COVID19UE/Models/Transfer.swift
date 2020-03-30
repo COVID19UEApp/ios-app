@@ -11,7 +11,7 @@ import Foundation
 struct Transfer {
     
     var mandate: Mandate
-    var pickup: Address
+    var pickup: Pickup
     var steps: [TransferStep] = []
     
     /// Returns the current address of the deceased body.
@@ -23,7 +23,7 @@ struct Transfer {
                 if let previousStep = steps[safe: i-1] {
                     return previousStep.destination.address
                 } else {
-                    return pickup
+                    return pickup.location.address
                 }
             }
             // last step, completed
@@ -31,6 +31,19 @@ struct Transfer {
                 return step.destination.address
             }
         }
-        return pickup
+        return pickup.location.address
+    }
+    
+    var nextDestination: Location? {
+        for step in steps.sorted(by: \.index, <) {
+            if [.open, .inProgress].contains(step.status) {
+                return step.destination
+            }
+        }
+        return nil
+    }
+    
+    var finalDestination: Location? {
+        steps.sorted(by: \.index, <).last?.destination
     }
 }

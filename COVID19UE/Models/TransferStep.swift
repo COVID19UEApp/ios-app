@@ -9,26 +9,31 @@
 import Foundation
 
 struct TransferStep {
-        
     var index: Int
     var status: Status = .open
-    var destination: Destination
+    var destination: Location
+}
+
+struct Pickup {
+    var location: Location
 }
 
 extension TransferStep {
     enum Status {
         case open, inProgress, completed
     }
-    
-    struct Destination {
-        var type: DestinationType
-        var address: Address
-        var contact: Contact
-    }
 }
 
-extension TransferStep.Destination {
-    enum DestinationType {
+
+struct Location {
+    var type: LocationType
+    var address: Address
+    var contact: Contact
+}
+
+extension Location {
+    enum LocationType {
+        case deathplace
         case funeralHome
         case cooling
         case pathology

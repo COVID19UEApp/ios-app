@@ -84,11 +84,25 @@ extension String {
         return self == "" ? nil : self
     }
 }
+extension Optional where Wrapped == String {
+    var orEmpty: String {
+        self ?? ""
+    }
+}
 
 extension Date {
     func string(withFormat format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter.string(from: self)
+    }
+}
+
+infix operator ???: NilCoalescingPrecedence
+
+public func ???<T>(optional: T?, defaultValue: @autoclosure () -> String) -> String {
+    switch optional {
+    case let value?: return String(describing: value)
+    case nil: return defaultValue()
     }
 }

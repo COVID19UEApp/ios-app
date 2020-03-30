@@ -12,6 +12,11 @@ struct Contact {
     var name: Name
     var phone: String?
     var email: String?
+    
+    var string: String {
+        let str = "\(name.full)\n\(phone.orEmpty)\n\(email.orEmpty)"
+        return str.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }
 
 struct Name {
@@ -21,6 +26,6 @@ struct Name {
     var maiden: String?
     
     var full: String {
-        first + " " + last
+        "\(salutation.orEmpty) \(first) \(last)".trimmingCharacters(in: .whitespaces)
     }
 }

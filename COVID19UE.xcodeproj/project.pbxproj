@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		885CA8A6242E09C200CAC968 /* TransferAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */; };
 		886966302431EA380016C15A /* gmapsStyles.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8869662F2431EA380016C15A /* gmapsStyles.geojson */; };
+		886966322431F3D70016C15A /* TransferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886966312431F3D70016C15A /* TransferDetailsViewController.swift */; };
 		88B7967B2429F6CD00E4B1A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7967A2429F6CD00E4B1A5 /* AppDelegate.swift */; };
 		88B7967D2429F6CD00E4B1A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7967C2429F6CD00E4B1A5 /* SceneDelegate.swift */; };
 		88B7967F2429F6CD00E4B1A5 /* TransfersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7967E2429F6CD00E4B1A5 /* TransfersViewController.swift */; };
@@ -46,6 +47,7 @@
 		65E6ECCCF5C344364D63B222 /* Pods-COVID19UE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19UE.release.xcconfig"; path = "Target Support Files/Pods-COVID19UE/Pods-COVID19UE.release.xcconfig"; sourceTree = "<group>"; };
 		885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferAnnotationView.xib; sourceTree = "<group>"; };
 		8869662F2431EA380016C15A /* gmapsStyles.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gmapsStyles.geojson; sourceTree = "<group>"; };
+		886966312431F3D70016C15A /* TransferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailsViewController.swift; sourceTree = "<group>"; };
 		88B796772429F6CD00E4B1A5 /* COVID19UE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID19UE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7967A2429F6CD00E4B1A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B7967C2429F6CD00E4B1A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		88B7968E2429F70200E4B1A5 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				886966312431F3D70016C15A /* TransferDetailsViewController.swift */,
 				88E4E73B242D0432002B8E27 /* Login */,
 				88E4E73A242D042B002B8E27 /* Main */,
 				88E4E742242D147B002B8E27 /* MapViewController.swift */,
@@ -378,6 +381,7 @@
 			files = (
 				88B7967F2429F6CD00E4B1A5 /* TransfersViewController.swift in Sources */,
 				88E4E73D242D0AB1002B8E27 /* LoginStep1ViewController.swift in Sources */,
+				886966322431F3D70016C15A /* TransferDetailsViewController.swift in Sources */,
 				88E4E714242CC522002B8E27 /* Mandate.swift in Sources */,
 				88E4E71E242CCEFC002B8E27 /* Contact.swift in Sources */,
 				88B7967B2429F6CD00E4B1A5 /* AppDelegate.swift in Sources */,

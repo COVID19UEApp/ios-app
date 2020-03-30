@@ -20,7 +20,7 @@ struct Address {
     var country: String
     
     var string: String {
-        return "\(street) \(house), \(zip) \(city), \(country)"
+        "\(institution.orEmpty)\n\(street) \(house)\n\(zip) \(city)\n\(country)".trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     func getCoordinate(_ completion: @escaping (CLLocation?) -> Void) {
