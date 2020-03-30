@@ -14,6 +14,7 @@ import MapKitGoogleStyler
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    var mapOverlay: MKTileOverlay?
     
     var locationManager: CLLocationManager!
     
@@ -57,10 +58,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func styleMap() {
         guard
-            let jsonURL = Bundle.main.url(forResource: "gmapsStyles", withExtension: "geojson"),
-            let tileOverlay = try? MapKitGoogleStyler.buildOverlay(with: jsonURL) else { return }
-        tileOverlay.canReplaceMapContent = true
-        mapView.addOverlay(tileOverlay, level: .aboveRoads)
+            traitCollection.userInterfaceStyle != .dark,
+            let jsonURL = Bundle.main.url(forResource: "mapStyles-light", withExtension: "geojson"),
+            let overlay = try? MapKitGoogleStyler.buildOverlay(with: jsonURL) else {
+                if let overlay = mapOverlay {
+                    mapView.removeOverlay(overlay)
+                }
+                return
+        }
+        overlay.canReplaceMapContent = true
+        mapView.addOverlay(overlay, level: .aboveRoads)
+        
+        mapOverlay = overlay
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        styleMap()
     }
 }
 

@@ -41,7 +41,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universitätsklinik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-Tc-q6h">
                     <rect key="frame" x="0.0" y="40" width="150" height="17"/>
                     <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
-                    <color key="textColor" name="Light Text"/>
+                    <color key="textColor" name="Text"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -65,10 +65,10 @@
         </view>
     </objects>
     <resources>
-        <image name="casket" width="75" height="75"/>
-        <image name="death" width="75" height="75"/>
-        <namedColor name="Light Text">
-            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="casket" width="25" height="25"/>
+        <image name="death" width="25" height="25"/>
+        <namedColor name="Text">
+            <color white="0.0" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
     </resources>
 </document>
