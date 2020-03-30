@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.0.5)
   - M13Checkbox (3.4.0)
+  - MapKitGoogleStyler (0.1.1)
   - OverlayContainer (3.3.1)
 
 DEPENDENCIES:
   - Alamofire
   - M13Checkbox
+  - MapKitGoogleStyler
   - OverlayContainer
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - M13Checkbox
+    - MapKitGoogleStyler
     - OverlayContainer
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  MapKitGoogleStyler: 8efdceb664fc1748a62a9e3b50a34b67a34247bc
   OverlayContainer: a4033b1fe603341ebafb38d6acac28af3a8fe7a7
 
-PODFILE CHECKSUM: e8fbd1683e3722759cda04c300183c9b0f657d43
+PODFILE CHECKSUM: ea561d53576098b1081b5bc96b029a55b2fb32b9
 
 COCOAPODS: 1.8.4

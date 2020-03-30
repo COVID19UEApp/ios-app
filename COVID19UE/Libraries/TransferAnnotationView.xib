@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Italic.ttf">
+            <string>OpenSans-Italic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="J96-EM-ZL7" customClass="TransferAnnotationView" customModule="COVID19UE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZd-oT-p4N">
+                    <rect key="frame" x="41" y="0.0" width="68" height="34"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casket" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-32-lT2">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="yQd-32-lT2" secondAttribute="height" multiplier="1:1" id="35K-Ux-5dh"/>
+                                <constraint firstAttribute="height" constant="34" id="JLZ-Rx-Bg1"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="death" translatesAutoresizingMaskIntoConstraints="NO" id="0SF-wA-n7T">
+                            <rect key="frame" x="34" y="0.0" width="34" height="34"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0SF-wA-n7T" firstAttribute="width" secondItem="yQd-32-lT2" secondAttribute="width" id="OfK-bU-msU"/>
+                        <constraint firstItem="0SF-wA-n7T" firstAttribute="height" secondItem="yQd-32-lT2" secondAttribute="height" id="WaM-f7-oY9"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universitätsklinik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hL-Tc-q6h">
+                    <rect key="frame" x="0.0" y="40" width="150" height="17"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" name="Light Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8hL-Tc-q6h" firstAttribute="top" secondItem="nZd-oT-p4N" secondAttribute="bottom" constant="6" id="DJF-sn-RpK"/>
+                <constraint firstItem="8hL-Tc-q6h" firstAttribute="leading" secondItem="vUg-wt-40e" secondAttribute="leading" id="G1s-Zg-MT3"/>
+                <constraint firstItem="vUg-wt-40e" firstAttribute="bottom" secondItem="8hL-Tc-q6h" secondAttribute="bottom" id="QOp-lQ-tcw"/>
+                <constraint firstItem="vUg-wt-40e" firstAttribute="trailing" secondItem="8hL-Tc-q6h" secondAttribute="trailing" id="Re1-X2-Kcc"/>
+                <constraint firstItem="nZd-oT-p4N" firstAttribute="top" secondItem="J96-EM-ZL7" secondAttribute="top" id="ly0-hW-NRK"/>
+                <constraint firstItem="nZd-oT-p4N" firstAttribute="centerX" secondItem="J96-EM-ZL7" secondAttribute="centerX" id="nHh-rb-5Cs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUg-wt-40e"/>
+            <connections>
+                <outlet property="leftIconView" destination="yQd-32-lT2" id="oSR-bM-t9y"/>
+                <outlet property="rightIconView" destination="0SF-wA-n7T" id="KqS-mB-heF"/>
+                <outlet property="titleLabel" destination="8hL-Tc-q6h" id="KW3-93-nwr"/>
+            </connections>
+            <point key="canvasLocation" x="-325" y="-132"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="casket" width="75" height="75"/>
+        <image name="death" width="75" height="75"/>
+        <namedColor name="Light Text">
+            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

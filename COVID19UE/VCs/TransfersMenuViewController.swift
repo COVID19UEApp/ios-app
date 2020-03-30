@@ -46,8 +46,8 @@ extension TransfersMenuViewController: CLLocationManagerDelegate {
                 TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
             ]),
             Transfer(mandate: mandate2, pickup: Address(street: "Trothaer Str.", house: "9", zip: "06118", city: "Halle", country: "Deutschland"), steps: [
-                TransferStep(index: 0, status: .open, destination: TransferStep.Destination(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
-                TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+                TransferStep(index: 0, status: .open, destination: TransferStep.Destination(type: .cooling, address: Address(street: "Blumenstr.", house: "19", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: TransferStep.Destination(type: .crematory, address: Address(street: "Mühlweg", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
             ])
         ]
         showOnMap(transfers)
@@ -91,7 +91,7 @@ class TransferMenuCell: UITableViewCell {
         deceasedLabel.text = transfer.mandate.deceased.name.full + ", " + (transfer.mandate.deceased.birthDate?.string(withFormat: "dd.MM.yyyy") ?? "")
         warningView.isShown = transfer.mandate.deceased.isContagious
         
-        transfer.pickup.getDistance { (distance) in
+        transfer.currentAddress.getDistance { (distance) in
             guard let distance = distance else { return }
             switch distance {
             case 0...999:

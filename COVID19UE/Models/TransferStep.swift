@@ -17,7 +17,7 @@ struct TransferStep {
 
 extension TransferStep {
     enum Status {
-        case open, inProgress, closed
+        case open, inProgress, completed
     }
     
     struct Destination {

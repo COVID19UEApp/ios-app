@@ -10,5 +10,6 @@ target 'COVID19UE' do
   pod 'Alamofire'
   pod 'M13Checkbox'
   pod 'OverlayContainer'
+  pod 'MapKitGoogleStyler'
 
 end
