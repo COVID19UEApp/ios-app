@@ -10,6 +10,9 @@ import Foundation
 import CoreLocation
 
 struct Address {
+    
+    var institution: String?
+    
     var street: String
     var house: String
     var zip: String

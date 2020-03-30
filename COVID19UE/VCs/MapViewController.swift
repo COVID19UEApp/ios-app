@@ -38,17 +38,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func showOnMap(_ transfers: [Transfer]) {
         for transfer in transfers {
             mapView.addAnnotation(TransferAnnotation(transfer: transfer))
-//            transfer.pickup.getCoordinate({ (location) in
-//                guard let location = location else { return }
-//                let distance: Int? = Account.current.user.currentLocation != nil ? Int(location.distance(from: Account.current.user.currentLocation!)) : nil
-//                let distanceString = distance != nil ? ((0...999).contains(distance!) ? " (\(distance!) m)" : String(format: " (%.2f km)", Float(distance!) / 1000)) : ""
-//
-//                let annotation = MKPointAnnotation()
-//                annotation.title = "Abholung" + distanceString
-//                annotation.subtitle = transfer.mandate.deceased.name.full + ", " + (transfer.mandate.deceased.birthDate?.string(withFormat: "dd.MM.yyyy") ?? "")
-//                annotation.coordinate = location.coordinate
-//                self.mapView.addAnnotation(annotation)
-//            })
         }
     }
     
@@ -128,6 +117,6 @@ class TransferAnnotationView: MKAnnotationView {
         self.transfer = transfer
         
         let a = transfer.currentAddress
-        titleLabel.text = "\(a.street) \(a.house), \(a.city)"
+        titleLabel.text = a.institution ?? "\(a.street) \(a.house), \(a.city)"
     }
 }
