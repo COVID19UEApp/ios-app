@@ -24,9 +24,9 @@ class TransfersViewController: UIViewController {
         overlayController.viewControllers = [menuVC]
         addChild(overlayController, in: view)
         addChild(mapVC, in: overlayContainerView)
-                
+        
         let shouldShowTransferDetails = { transfer in
-            self.performSegue(withIdentifier: "Transfers_to_TransferDetails", sender: transfer)
+            self.performSegue(withIdentifier: "Transfers_to_Transfer", sender: transfer)
         }
         mapVC.shouldShowTransferDetails = shouldShowTransferDetails
         menuVC.shouldShowTransferDetails = shouldShowTransferDetails
@@ -38,7 +38,7 @@ class TransfersViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let transfer = sender as? Transfer, let dest = segue.destination as? TransferDetailsViewController {
+        if let transfer = sender as? Transfer, let dest = segue.destination as? TransferViewController {
             dest.transfer = transfer
         }
     }
