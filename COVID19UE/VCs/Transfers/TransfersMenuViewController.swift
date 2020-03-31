@@ -42,16 +42,16 @@ extension TransfersMenuViewController: CLLocationManagerDelegate {
         
         transfers = [
             Transfer(mandate: mandate1,
-                     pickup: Pickup(location: Location(type: .deathplace, address: Address(street: "Reilstr.", house: "128", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                     pickup: Pickup(location: Location(type: .deathplace, address: Address(street: "Reilstr.", house: "128", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Frieda", last: "Otto-Geffarth"), phone: PhoneNumber("+49 152 01887600"), email: "linus@geffarth.de"))),
                      steps: [
-                TransferStep(index: 0, status: .open, destination: Location(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
-                TransferStep(index: 1, status: .open, destination: Location(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+                TransferStep(index: 0, status: .open, destination: Location(type: .cooling, address: Address(street: "Hermannstr.", house: "29", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: PhoneNumber("0179 265 4018"), email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: Location(type: .crematory, address: Address(street: "Burgstr.", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: PhoneNumber("0151 192 13291"), email: "pmueller@krema-halle.de")))
             ]),
             Transfer(mandate: mandate2,
-                     pickup: Pickup(location: Location(type: .deathplace, address: Address(street: "Trothaer Str.", house: "9", zip: "06118", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
+                     pickup: Pickup(location: Location(type: .deathplace, address: Address(street: "Trothaer Str.", house: "9", zip: "06118", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: PhoneNumber("0179 265 4018"), email: "linus@geffarth.de"))),
                      steps: [
-                TransferStep(index: 0, status: .open, destination: Location(type: .cooling, address: Address(street: "Blumenstr.", house: "19", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: "0179 265 4018", email: "linus@geffarth.de"))),
-                TransferStep(index: 1, status: .open, destination: Location(type: .crematory, address: Address(street: "Mühlweg", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: "0151 192 13291", email: "pmueller@krema-halle.de")))
+                TransferStep(index: 0, status: .open, destination: Location(type: .cooling, address: Address(street: "Blumenstr.", house: "19", zip: "06108", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Linus", last: "Geffarth"), phone: PhoneNumber("0179 265 4018"), email: "linus@geffarth.de"))),
+                TransferStep(index: 1, status: .open, destination: Location(type: .crematory, address: Address(street: "Mühlweg", house: "65", zip: "06114", city: "Halle", country: "Deutschland"), contact: Contact(name: Name(first: "Peter", last: "Müller"), phone: PhoneNumber("0151 192 13291"), email: "pmueller@krema-halle.de")))
             ])
         ]
         showOnMap(transfers)

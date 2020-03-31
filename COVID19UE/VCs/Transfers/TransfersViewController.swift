@@ -38,7 +38,7 @@ class TransfersViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let transfer = sender as? Transfer, let dest = segue.destination as? TransferViewController {
+        if let transfer = sender as? Transfer, let dest = segue.destination.children.first as? TransferViewController {
             dest.transfer = transfer
         }
     }

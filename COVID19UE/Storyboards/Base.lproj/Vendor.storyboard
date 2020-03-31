@@ -819,6 +819,7 @@ Krematoriumsstraße 1
         <!--Transfer Accepted View Controller-->
         <scene sceneID="wm6-av-ZoY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nG4-Ux-d2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Peh-tV-PLf" customClass="TransferAcceptedViewController" customModule="COVID19UE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNt-ku-rMl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -832,25 +833,6 @@ Sie haben den Auftrag angenommen.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f6f-Mv-hzd">
-                                <rect key="frame" x="20" y="22.5" width="18" height="13"/>
-                                <color key="tintColor" name="Text"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="18" id="5rn-pQ-6z4"/>
-                                    <constraint firstAttribute="width" secondItem="f6f-Mv-hzd" secondAttribute="height" multiplier="1:1" id="Crc-lg-pWu"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veS-JM-9Sm">
-                                <rect key="frame" x="20" y="20" width="71" height="28"/>
-                                <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="10"/>
-                                <state key="normal" title="zurück">
-                                    <color key="titleColor" name="Text"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismiss" destination="Peh-tV-PLf" eventType="touchUpInside" id="oZn-iJ-KiW"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_wirvsvirus" translatesAutoresizingMaskIntoConstraints="NO" id="PKp-Ut-rgD">
                                 <rect key="frame" x="128" y="766" width="158" height="42"/>
                                 <constraints>
@@ -858,41 +840,33 @@ Sie haben den Auftrag angenommen.</string>
                                     <constraint firstAttribute="height" constant="42" id="Spt-hb-yt6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abholung ankündigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndq-Dz-zOm">
-                                <rect key="frame" x="111.5" y="418.5" width="191.5" height="25"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhJ-ys-pTu" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="107" y="513.5" width="200" height="44"/>
+                                <rect key="frame" x="107" y="468.5" width="200" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Anrufen"/>
+                                <state key="normal" title="Los geht's"/>
+                                <connections>
+                                    <action selector="nextStep" destination="Peh-tV-PLf" eventType="touchUpInside" id="D0g-dS-jPe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ndq-Dz-zOm" firstAttribute="top" secondItem="Eve-qF-gja" secondAttribute="bottom" constant="40" id="3rl-qm-HLg"/>
                             <constraint firstItem="VhJ-ys-pTu" firstAttribute="centerX" secondItem="zNt-ku-rMl" secondAttribute="centerX" id="BjM-ki-mA3"/>
-                            <constraint firstItem="Ndq-Dz-zOm" firstAttribute="centerX" secondItem="zNt-ku-rMl" secondAttribute="centerX" id="Hzd-IN-sdo"/>
+                            <constraint firstItem="VhJ-ys-pTu" firstAttribute="top" secondItem="Eve-qF-gja" secondAttribute="bottom" constant="90" id="OgI-qa-mtz"/>
                             <constraint firstItem="Eve-qF-gja" firstAttribute="centerY" secondItem="zNt-ku-rMl" secondAttribute="centerY" constant="-100" id="RNe-rf-weI"/>
-                            <constraint firstItem="f6f-Mv-hzd" firstAttribute="top" secondItem="veS-JM-9Sm" secondAttribute="top" id="TQ4-eo-6vP"/>
-                            <constraint firstItem="veS-JM-9Sm" firstAttribute="top" secondItem="mC5-6f-mQp" secondAttribute="top" constant="20" id="bCL-sD-b60"/>
-                            <constraint firstItem="f6f-Mv-hzd" firstAttribute="leading" secondItem="veS-JM-9Sm" secondAttribute="leading" id="bZb-DF-i8N"/>
                             <constraint firstItem="PKp-Ut-rgD" firstAttribute="centerX" secondItem="zNt-ku-rMl" secondAttribute="centerX" id="ciL-Zi-5tl"/>
                             <constraint firstItem="PKp-Ut-rgD" firstAttribute="bottom" secondItem="mC5-6f-mQp" secondAttribute="bottom" id="fmy-pl-yYA"/>
-                            <constraint firstItem="veS-JM-9Sm" firstAttribute="leading" secondItem="mC5-6f-mQp" secondAttribute="leading" constant="20" id="g7X-27-9fR"/>
                             <constraint firstItem="Eve-qF-gja" firstAttribute="centerX" secondItem="zNt-ku-rMl" secondAttribute="centerX" id="ilD-gr-LjK"/>
-                            <constraint firstItem="VhJ-ys-pTu" firstAttribute="top" secondItem="Ndq-Dz-zOm" secondAttribute="bottom" constant="70" id="ox0-yq-qkE"/>
                             <constraint firstItem="Eve-qF-gja" firstAttribute="leading" secondItem="mC5-6f-mQp" secondAttribute="leading" constant="40" id="sfx-uF-pFd"/>
-                            <constraint firstItem="mC5-6f-mQp" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="veS-JM-9Sm" secondAttribute="trailing" constant="20" id="tQE-ZT-JVe"/>
                             <constraint firstItem="PKp-Ut-rgD" firstAttribute="width" secondItem="PKp-Ut-rgD" secondAttribute="height" multiplier="1215:322" id="wlQ-qd-1hr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mC5-6f-mQp"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fub-eY-U3o"/>
+                    <connections>
+                        <segue destination="UtS-wS-EMd" kind="show" identifier="TransferAccepted_to_TransferStep1" id="fNw-ad-JTP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nG4-Ux-d2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4470" y="-229"/>
         </scene>
@@ -913,6 +887,154 @@ Sie haben den Auftrag angenommen.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRJ-uC-xaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2416" y="-229"/>
+        </scene>
+        <!--Transfer Step1 View Controller-->
+        <scene sceneID="gUR-2I-wpP">
+            <objects>
+                <viewController id="UtS-wS-EMd" customClass="TransferStep1ViewController" customModule="COVID19UE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NPh-3V-7YO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6G-ui-jHN">
+                                <rect key="frame" x="40" y="233.5" width="334" height="38.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_wirvsvirus" translatesAutoresizingMaskIntoConstraints="NO" id="8fL-vM-BBW">
+                                <rect key="frame" x="128" y="766" width="158" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="AHE-KF-aJR"/>
+                                    <constraint firstAttribute="width" secondItem="8fL-vM-BBW" secondAttribute="height" multiplier="1215:322" id="egU-pi-BfD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abholung ankündigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKj-fq-q8y">
+                                <rect key="frame" x="111.5" y="352" width="191.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYX-RU-I5E" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
+                                <rect key="frame" x="107" y="497" width="200" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Anrufen"/>
+                                <connections>
+                                    <action selector="call" destination="UtS-wS-EMd" eventType="touchUpInside" id="nQx-En-g3B"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgN-5y-zsI" customClass="SecondaryButton" customModule="COVID19UE" customModuleProvider="target">
+                                <rect key="frame" x="184" y="561" width="46" height="30"/>
+                                <state key="normal" title="Weiter"/>
+                                <connections>
+                                    <action selector="nextStep" destination="UtS-wS-EMd" eventType="touchUpInside" id="qDF-kE-cBX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wKj-fq-q8y" firstAttribute="top" secondItem="p6G-ui-jHN" secondAttribute="bottom" constant="80" id="BJy-U4-M5t"/>
+                            <constraint firstItem="GgN-5y-zsI" firstAttribute="top" secondItem="UYX-RU-I5E" secondAttribute="bottom" constant="20" id="Bre-Gc-BBI"/>
+                            <constraint firstItem="8fL-vM-BBW" firstAttribute="bottom" secondItem="m4X-mB-Vk0" secondAttribute="bottom" id="LA4-QN-TAq"/>
+                            <constraint firstItem="UYX-RU-I5E" firstAttribute="centerX" secondItem="NPh-3V-7YO" secondAttribute="centerX" id="PRu-lf-CJq"/>
+                            <constraint firstItem="p6G-ui-jHN" firstAttribute="leading" secondItem="m4X-mB-Vk0" secondAttribute="leading" constant="40" id="QId-aC-zcT"/>
+                            <constraint firstItem="8fL-vM-BBW" firstAttribute="width" secondItem="8fL-vM-BBW" secondAttribute="height" multiplier="1215:322" id="Qhz-KY-tAq"/>
+                            <constraint firstItem="8fL-vM-BBW" firstAttribute="centerX" secondItem="NPh-3V-7YO" secondAttribute="centerX" id="Vk5-hS-jNg"/>
+                            <constraint firstItem="wKj-fq-q8y" firstAttribute="centerX" secondItem="NPh-3V-7YO" secondAttribute="centerX" id="WRA-Mx-zsv"/>
+                            <constraint firstItem="UYX-RU-I5E" firstAttribute="top" secondItem="wKj-fq-q8y" secondAttribute="bottom" constant="120" id="Zg4-rI-Fov"/>
+                            <constraint firstItem="p6G-ui-jHN" firstAttribute="centerY" secondItem="NPh-3V-7YO" secondAttribute="centerY" multiplier="0.6" id="gdn-kr-fCa"/>
+                            <constraint firstItem="GgN-5y-zsI" firstAttribute="centerX" secondItem="NPh-3V-7YO" secondAttribute="centerX" id="p7G-lo-5aD"/>
+                            <constraint firstItem="p6G-ui-jHN" firstAttribute="centerX" secondItem="NPh-3V-7YO" secondAttribute="centerX" id="sUR-Ld-71N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="m4X-mB-Vk0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dpS-ZN-etp"/>
+                    <connections>
+                        <outlet property="nextButton" destination="GgN-5y-zsI" id="PoN-kE-kG6"/>
+                        <segue destination="y3M-hK-1HM" kind="show" identifier="TransferStep1_to_TransferStep2" id="lXc-tH-7g6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgf-sm-Ayg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5152" y="-229"/>
+        </scene>
+        <!--Transfer Step2 View Controller-->
+        <scene sceneID="7xD-fk-Tjz">
+            <objects>
+                <viewController id="y3M-hK-1HM" customClass="TransferStep2ViewController" customModule="COVID19UE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZs-69-oVv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbO-CP-DMQ">
+                                <rect key="frame" x="40" y="233.5" width="334" height="38.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iUN-mf-vlT">
+                                <rect key="frame" x="20" y="22.5" width="18" height="13"/>
+                                <color key="tintColor" name="Text"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="juo-Oc-Vkc"/>
+                                    <constraint firstAttribute="width" secondItem="iUN-mf-vlT" secondAttribute="height" multiplier="1:1" id="sdk-Gx-2fl"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGj-oi-1LE">
+                                <rect key="frame" x="20" y="20" width="71" height="28"/>
+                                <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="zurück">
+                                    <color key="titleColor" name="Text"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss" destination="y3M-hK-1HM" eventType="touchUpInside" id="hb2-1v-Z27"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_wirvsvirus" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-bi-SOh">
+                                <rect key="frame" x="128" y="766" width="158" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dNc-bi-SOh" secondAttribute="height" multiplier="1215:322" id="Id9-gn-Hbl"/>
+                                    <constraint firstAttribute="height" constant="42" id="WVr-8k-Gp4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abholung ankündigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQn-JD-GOO">
+                                <rect key="frame" x="111.5" y="352" width="191.5" height="25"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0d-o9-kdF" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
+                                <rect key="frame" x="107" y="497" width="200" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Anrufen"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iUN-mf-vlT" firstAttribute="top" secondItem="WGj-oi-1LE" secondAttribute="top" id="00f-96-Leq"/>
+                            <constraint firstItem="dNc-bi-SOh" firstAttribute="centerX" secondItem="lZs-69-oVv" secondAttribute="centerX" id="0Hw-qh-h88"/>
+                            <constraint firstItem="VQn-JD-GOO" firstAttribute="top" secondItem="bbO-CP-DMQ" secondAttribute="bottom" constant="80" id="5qY-9w-Ij1"/>
+                            <constraint firstItem="z0d-o9-kdF" firstAttribute="centerX" secondItem="lZs-69-oVv" secondAttribute="centerX" id="71w-3h-N3n"/>
+                            <constraint firstItem="bbO-CP-DMQ" firstAttribute="centerY" secondItem="lZs-69-oVv" secondAttribute="centerY" multiplier="0.6" id="7gS-eq-5h0"/>
+                            <constraint firstItem="bbO-CP-DMQ" firstAttribute="centerX" secondItem="lZs-69-oVv" secondAttribute="centerX" id="F7u-xV-2Il"/>
+                            <constraint firstItem="iUN-mf-vlT" firstAttribute="leading" secondItem="WGj-oi-1LE" secondAttribute="leading" id="Qe9-5H-Jg7"/>
+                            <constraint firstItem="VQn-JD-GOO" firstAttribute="centerX" secondItem="lZs-69-oVv" secondAttribute="centerX" id="Qzf-r3-OiQ"/>
+                            <constraint firstItem="dNc-bi-SOh" firstAttribute="bottom" secondItem="4xI-vb-jLt" secondAttribute="bottom" id="ZjH-xb-uUT"/>
+                            <constraint firstItem="4xI-vb-jLt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WGj-oi-1LE" secondAttribute="trailing" constant="20" id="aNK-0C-Qur"/>
+                            <constraint firstItem="WGj-oi-1LE" firstAttribute="leading" secondItem="4xI-vb-jLt" secondAttribute="leading" constant="20" id="aWK-Aa-TYN"/>
+                            <constraint firstItem="bbO-CP-DMQ" firstAttribute="leading" secondItem="4xI-vb-jLt" secondAttribute="leading" constant="40" id="dNb-54-K3i"/>
+                            <constraint firstItem="WGj-oi-1LE" firstAttribute="top" secondItem="4xI-vb-jLt" secondAttribute="top" constant="20" id="dTc-W7-zKf"/>
+                            <constraint firstItem="z0d-o9-kdF" firstAttribute="top" secondItem="VQn-JD-GOO" secondAttribute="bottom" constant="120" id="iHQ-wM-Nbg"/>
+                            <constraint firstItem="dNc-bi-SOh" firstAttribute="width" secondItem="dNc-bi-SOh" secondAttribute="height" multiplier="1215:322" id="rQr-0W-9nV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4xI-vb-jLt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LBR-za-FKU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmt-ol-Ktr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5835" y="-228"/>
         </scene>
     </scenes>
     <resources>

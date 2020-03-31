@@ -37,7 +37,6 @@ class PrimaryButton: UIButton {
         
         backgroundColor = UIColor(named: "Primary")
         
-        translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalToConstant: 200).isActive = true
         heightAnchor.constraint(equalToConstant: 44).isActive = true
     }

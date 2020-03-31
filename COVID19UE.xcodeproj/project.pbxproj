@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		880111CA243225B900D74F0B /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880111C9243225B900D74F0B /* TransferViewController.swift */; };
 		880111CC2432270900D74F0B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880111CB2432270900D74F0B /* PrimaryButton.swift */; };
+		884C4B112433511600C5073F /* TransferStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B102433511600C5073F /* TransferStep1ViewController.swift */; };
+		884C4B132433531600C5073F /* TransferStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B122433531600C5073F /* TransferStep2ViewController.swift */; };
+		884C4B152433536200C5073F /* TransferStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B142433536200C5073F /* TransferStepViewController.swift */; };
+		884C4B1724335B0C00C5073F /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1624335B0C00C5073F /* PhoneNumber.swift */; };
 		885CA8A6242E09C200CAC968 /* TransferAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */; };
 		886966302431EA380016C15A /* mapStyles-light.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8869662F2431EA380016C15A /* mapStyles-light.geojson */; };
 		886966322431F3D70016C15A /* TransferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886966312431F3D70016C15A /* TransferDetailsViewController.swift */; };
@@ -51,6 +55,10 @@
 		65E6ECCCF5C344364D63B222 /* Pods-COVID19UE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19UE.release.xcconfig"; path = "Target Support Files/Pods-COVID19UE/Pods-COVID19UE.release.xcconfig"; sourceTree = "<group>"; };
 		880111C9243225B900D74F0B /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		880111CB2432270900D74F0B /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		884C4B102433511600C5073F /* TransferStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStep1ViewController.swift; sourceTree = "<group>"; };
+		884C4B122433531600C5073F /* TransferStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStep2ViewController.swift; sourceTree = "<group>"; };
+		884C4B142433536200C5073F /* TransferStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStepViewController.swift; sourceTree = "<group>"; };
+		884C4B1624335B0C00C5073F /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferAnnotationView.xib; sourceTree = "<group>"; };
 		8869662F2431EA380016C15A /* mapStyles-light.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mapStyles-light.geojson"; sourceTree = "<group>"; };
 		886966312431F3D70016C15A /* TransferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailsViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +127,10 @@
 			children = (
 				880111C9243225B900D74F0B /* TransferViewController.swift */,
 				886966312431F3D70016C15A /* TransferDetailsViewController.swift */,
+				884C4B142433536200C5073F /* TransferStepViewController.swift */,
 				889B627624323BAA00BCD0E1 /* TransferAcceptedViewController.swift */,
+				884C4B102433511600C5073F /* TransferStep1ViewController.swift */,
+				884C4B122433531600C5073F /* TransferStep2ViewController.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 			children = (
 				880111CB2432270900D74F0B /* PrimaryButton.swift */,
 				88D9264924322BBA0041A62E /* SecondaryButton.swift */,
+				884C4B1624335B0C00C5073F /* PhoneNumber.swift */,
 				885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */,
 			);
 			path = Libraries;
@@ -409,6 +421,7 @@
 			files = (
 				88B7967F2429F6CD00E4B1A5 /* TransfersViewController.swift in Sources */,
 				88E4E73D242D0AB1002B8E27 /* LoginStep1ViewController.swift in Sources */,
+				884C4B152433536200C5073F /* TransferStepViewController.swift in Sources */,
 				880111CC2432270900D74F0B /* PrimaryButton.swift in Sources */,
 				88D9264A24322BBA0041A62E /* SecondaryButton.swift in Sources */,
 				886966322431F3D70016C15A /* TransferDetailsViewController.swift in Sources */,
@@ -425,8 +438,11 @@
 				88E4E722242CE119002B8E27 /* Global.swift in Sources */,
 				88E4E747242D15CE002B8E27 /* Transfer.swift in Sources */,
 				88E4E741242D0FB8002B8E27 /* Extensions.swift in Sources */,
+				884C4B132433531600C5073F /* TransferStep2ViewController.swift in Sources */,
 				88E4E720242CD043002B8E27 /* Address.swift in Sources */,
+				884C4B112433511600C5073F /* TransferStep1ViewController.swift in Sources */,
 				88E4E718242CC56F002B8E27 /* User.swift in Sources */,
+				884C4B1724335B0C00C5073F /* PhoneNumber.swift in Sources */,
 				88E4E743242D147B002B8E27 /* MapViewController.swift in Sources */,
 				88E4E73F242D0ACE002B8E27 /* Account.swift in Sources */,
 			);

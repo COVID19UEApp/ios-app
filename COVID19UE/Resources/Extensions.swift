@@ -33,7 +33,16 @@ extension UIView {
 }
 
 extension UIViewController {
+    func canPerformSegue(withIdentifier id: String) -> Bool {
+        guard let segues = self.value(forKey: "storyboardSegueTemplates") as? [NSObject] else { return false }
+        return segues.first { $0.value(forKey: "identifier") as? String == id } != nil
+    }
+    
     func performSegue(withID id: String) {
+        guard canPerformSegue(withIdentifier: id) else {
+            print("WARNING: no segue found for identifier '\(id)' – performSegue(withID:), Extensions.swift")
+            return
+        }
         performSegue(withIdentifier: id, sender: nil)
     }
     
@@ -83,6 +92,42 @@ extension String {
     var nonEmpty: String? {
         return self == "" ? nil : self
     }
+    
+    /// Determines whether the string (self) conforms to the regex pattern passed, `ignoringCase` is `true` by default
+    func conforms(toPattern pattern: String, ignoringCase: Bool = true) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: ignoringCase ? [.caseInsensitive] : []) else { return false }
+        let matches = regex.firstMatch(in: self, options: [], range: NSMakeRange(0, utf16.count))
+        return matches != nil
+    }
+    
+    enum ContentType {
+        case email
+        case empty
+        case number
+        case url
+        case phoneNumber
+    }
+    func `is`(_ contentType: ContentType) -> Bool {
+        var pattern = ""
+        switch contentType {
+        case .email:
+            pattern = #"^[a-z0-9](\.?[a-z0-9_-]){0,}@([a-z0-9-]+\.){1,2}([a-z]{1,6}\.)?[a-z]{2,6}$"#
+        case .empty:
+            pattern = #"^$"#
+        case .number:
+            pattern = #"^\d+$"#
+        case .url:
+            pattern = #"^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#\[\]@!\$&'\(\)\*\+,;=.]+$"#
+        case .phoneNumber:
+            pattern = #"^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$"#
+        }
+        return self.conforms(toPattern: pattern, ignoringCase: true)
+    }
+    
+    var onlyDigits: String {
+        let filtredUnicodeScalars = unicodeScalars.filter { CharacterSet.decimalDigits.contains($0) }
+        return String(String.UnicodeScalarView(filtredUnicodeScalars))
+    }
 }
 extension Optional where Wrapped == String {
     var orEmpty: String {
@@ -104,5 +149,11 @@ public func ???<T>(optional: T?, defaultValue: @autoclosure () -> String) -> Str
     switch optional {
     case let value?: return String(describing: value)
     case nil: return defaultValue()
+    }
+}
+
+extension Bool {
+    var not: Bool {
+        !self
     }
 }

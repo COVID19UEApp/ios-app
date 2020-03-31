@@ -8,29 +8,16 @@
 
 import UIKit
 
-class TransferAcceptedViewController: UIViewController {
-    
-    var transfer: Transfer!
+class TransferAcceptedViewController: TransferStepViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // disables swipe down to dismiss view controller
+        isModalInPresentation = true
     }
     
-    @IBAction func nextStep() {
+    @IBAction override func nextStep() {
         performSegue(withID: "TransferAccepted_to_TransferStep1")
-    }
-    
-    @IBAction func dismiss() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        if let dest = segue.destination as? TransferDetailsViewController {
-            dest.transfer = transfer
-        }
     }
 }

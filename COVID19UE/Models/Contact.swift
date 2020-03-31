@@ -10,11 +10,11 @@ import Foundation
 
 struct Contact {
     var name: Name
-    var phone: String?
+    var phone: PhoneNumber?
     var email: String?
     
     var string: String {
-        let str = "\(name.full)\n\(phone.orEmpty)\n\(email.orEmpty)"
+        let str = "\(name.full)\n\((phone?.number).orEmpty)\n\(email.orEmpty)"
         return str.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
