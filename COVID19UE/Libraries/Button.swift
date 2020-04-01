@@ -12,7 +12,7 @@ import UIKit
 class Button: UIButton {
     
     func commonInit() {
-        titleLabel?.font = UIFont(name: "OpenSans-Semibold", size: 14)
+        titleLabel?.font = labelFont
         set(title: title(for: .normal))
         set(titleColor: textColor)
     }
@@ -30,6 +30,14 @@ class Button: UIButton {
         return .black
         #else
         return UIColor(named: "Primary")
+        #endif
+    }
+    
+    var labelFont: UIFont? {
+        #if TARGET_INTERFACE_BUILDER
+        return UIFont.systemFont(ofSize: 14, weight: .semibold)
+        #else
+        return UIFont(name: "OpenSans-Semibold", size: 14)
         #endif
     }
     

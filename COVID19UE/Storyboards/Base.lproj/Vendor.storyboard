@@ -754,14 +754,14 @@ Krematoriumsstraße 1
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtc-eA-Xpu" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                                <rect key="frame" x="93.5" y="428" width="127" height="30"/>
+                                                <rect key="frame" x="47" y="414" width="220" height="44"/>
                                                 <state key="normal" title="Auftrag annehmen"/>
                                                 <connections>
                                                     <action selector="acceptTransfer" destination="1FB-hB-oQd" eventType="touchUpInside" id="vuA-jP-5S4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFv-Ss-AZ1" customClass="TertiaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                                <rect key="frame" x="95.5" y="466" width="123" height="30"/>
+                                                <rect key="frame" x="64" y="466" width="186" height="33"/>
                                                 <state key="normal" title="Auftragsübersicht"/>
                                                 <connections>
                                                     <action selector="showDetails" destination="1FB-hB-oQd" eventType="touchUpInside" id="Tw1-x2-dKV"/>
@@ -814,7 +814,7 @@ Krematoriumsstraße 1
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdJ-Bz-Jwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3107" y="-194"/>
+            <point key="canvasLocation" x="3105.7971014492755" y="-194.19642857142856"/>
         </scene>
         <!--Transfer Accepted View Controller-->
         <scene sceneID="wm6-av-ZoY">
@@ -825,7 +825,7 @@ Krematoriumsstraße 1
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-qF-gja">
-                                <rect key="frame" x="40" y="272" width="334" height="98"/>
+                                <rect key="frame" x="40" y="264" width="334" height="114.5"/>
                                 <string key="text">Vielen Dank, 
 Sie haben den Auftrag angenommen.</string>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
@@ -840,7 +840,7 @@ Sie haben den Auftrag angenommen.</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhJ-ys-pTu" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="107" y="460" width="200" height="44"/>
+                                <rect key="frame" x="107" y="468.5" width="200" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Los geht's"/>
                                 <connections>
@@ -897,7 +897,7 @@ Sie haben den Auftrag angenommen.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6G-ui-jHN">
-                                <rect key="frame" x="40" y="194" width="334" height="33"/>
+                                <rect key="frame" x="40" y="191.5" width="334" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -910,13 +910,13 @@ Sie haben den Auftrag angenommen.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abholung ankündigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKj-fq-q8y">
-                                <rect key="frame" x="119" y="307" width="176" height="21"/>
+                                <rect key="frame" x="111.5" y="310" width="191.5" height="25"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYX-RU-I5E" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="107" y="448" width="200" height="44"/>
+                                <rect key="frame" x="107" y="455" width="200" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Anrufen"/>
                                 <connections>
@@ -924,7 +924,7 @@ Sie haben den Auftrag angenommen.</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgN-5y-zsI" customClass="TertiaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="176.5" y="512" width="61" height="33"/>
+                                <rect key="frame" x="180.5" y="519" width="53" height="29"/>
                                 <state key="normal" title="Weiter"/>
                                 <connections>
                                     <action selector="nextStep" destination="UtS-wS-EMd" eventType="touchUpInside" id="qDF-kE-cBX"/>
@@ -967,7 +967,7 @@ Sie haben den Auftrag angenommen.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbO-CP-DMQ">
-                                <rect key="frame" x="40" y="194" width="334" height="33"/>
+                                <rect key="frame" x="40" y="191.5" width="334" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -999,13 +999,13 @@ Sie haben den Auftrag angenommen.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informieren Sie uns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQn-JD-GOO">
-                                <rect key="frame" x="129.5" y="307" width="155.5" height="21"/>
+                                <rect key="frame" x="122" y="310" width="170.5" height="25"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0d-o9-kdF" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="99" y="448" width="216" height="44"/>
+                                <rect key="frame" x="96" y="455" width="222" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Ich fahre jetzt los"/>
                                 <connections>
@@ -1051,7 +1051,7 @@ Sie haben den Auftrag angenommen.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUC-bn-WYQ">
-                                <rect key="frame" x="40" y="194" width="334" height="33"/>
+                                <rect key="frame" x="40" y="191.5" width="334" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1083,16 +1083,16 @@ Sie haben den Auftrag angenommen.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auftrag erledigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STR-Ht-NvB">
-                                <rect key="frame" x="138" y="307" width="138" height="21"/>
+                                <rect key="frame" x="131.5" y="310" width="151.5" height="25"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98X-rQ-e9B">
-                                <rect key="frame" x="0.0" y="352" width="414" height="490"/>
+                                <rect key="frame" x="0.0" y="359" width="414" height="483"/>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-XK-EHE" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="107" y="376" width="200" height="44"/>
+                                <rect key="frame" x="105" y="383" width="204" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Route berechnen"/>
                                 <connections>
@@ -1144,7 +1144,7 @@ Sie haben den Auftrag angenommen.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schritt 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCb-sJ-WU9">
-                                <rect key="frame" x="40" y="194" width="334" height="33"/>
+                                <rect key="frame" x="40" y="191.5" width="334" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1176,13 +1176,13 @@ Sie haben den Auftrag angenommen.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rückmeldung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyk-YQ-8FO">
-                                <rect key="frame" x="151.5" y="307" width="111.5" height="21"/>
+                                <rect key="frame" x="147.5" y="310" width="119" height="25"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qye-8v-Rxz" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="75" y="448" width="264" height="44"/>
+                                <rect key="frame" x="71.5" y="455" width="271" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Auftrag abgeschlossen"/>
                                 <connections>
@@ -1228,7 +1228,7 @@ Sie haben den Auftrag angenommen.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vielen Dank!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yX-B8-aKC">
-                                <rect key="frame" x="40" y="304.5" width="334" height="33"/>
+                                <rect key="frame" x="40" y="302" width="334" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1241,7 +1241,7 @@ Sie haben den Auftrag angenommen.</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Run-uo-v5O" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
-                                <rect key="frame" x="107" y="427.5" width="200" height="44"/>
+                                <rect key="frame" x="107" y="430.5" width="200" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Fertig"/>
                                 <connections>
