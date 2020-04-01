@@ -10,7 +10,7 @@ import UIKit
 
 class TransferStepViewController: UIViewController {
 
-    var transfer: Transfer!
+    var transfer: Transfer! 
     
     var step: Int {
         1

@@ -16,6 +16,8 @@
 		884C4B192434810C00C5073F /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B182434810C00C5073F /* SecondaryButton.swift */; };
 		884C4B1B2434849500C5073F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1A2434849500C5073F /* PrimaryButton.swift */; };
 		884C4B1D2434869200C5073F /* TransferStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1C2434869200C5073F /* TransferStep3ViewController.swift */; };
+		884C4B1F243495DC00C5073F /* TransferStep4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1E243495DC00C5073F /* TransferStep4ViewController.swift */; };
+		884C4B21243498BA00C5073F /* TransferCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B20243498BA00C5073F /* TransferCompletedViewController.swift */; };
 		885CA8A6242E09C200CAC968 /* TransferAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */; };
 		886966302431EA380016C15A /* mapStyles-light.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8869662F2431EA380016C15A /* mapStyles-light.geojson */; };
 		886966322431F3D70016C15A /* TransferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886966312431F3D70016C15A /* TransferDetailsViewController.swift */; };
@@ -65,6 +67,8 @@
 		884C4B182434810C00C5073F /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		884C4B1A2434849500C5073F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		884C4B1C2434869200C5073F /* TransferStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStep3ViewController.swift; sourceTree = "<group>"; };
+		884C4B1E243495DC00C5073F /* TransferStep4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStep4ViewController.swift; sourceTree = "<group>"; };
+		884C4B20243498BA00C5073F /* TransferCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCompletedViewController.swift; sourceTree = "<group>"; };
 		885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferAnnotationView.xib; sourceTree = "<group>"; };
 		8869662F2431EA380016C15A /* mapStyles-light.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mapStyles-light.geojson"; sourceTree = "<group>"; };
 		886966312431F3D70016C15A /* TransferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailsViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				884C4B102433511600C5073F /* TransferStep1ViewController.swift */,
 				884C4B122433531600C5073F /* TransferStep2ViewController.swift */,
 				884C4B1C2434869200C5073F /* TransferStep3ViewController.swift */,
+				884C4B1E243495DC00C5073F /* TransferStep4ViewController.swift */,
+				884C4B20243498BA00C5073F /* TransferCompletedViewController.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -440,6 +446,8 @@
 				88B7967B2429F6CD00E4B1A5 /* AppDelegate.swift in Sources */,
 				88E4E71C242CCB71002B8E27 /* TransferStep.swift in Sources */,
 				88E4E716242CC55B002B8E27 /* Agent.swift in Sources */,
+				884C4B21243498BA00C5073F /* TransferCompletedViewController.swift in Sources */,
+				884C4B1F243495DC00C5073F /* TransferStep4ViewController.swift in Sources */,
 				88B7967D2429F6CD00E4B1A5 /* SceneDelegate.swift in Sources */,
 				88E4E745242D158C002B8E27 /* TransfersMenuViewController.swift in Sources */,
 				880111CA243225B900D74F0B /* TransferViewController.swift in Sources */,

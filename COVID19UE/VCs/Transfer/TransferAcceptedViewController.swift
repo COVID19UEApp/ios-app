@@ -17,7 +17,7 @@ class TransferAcceptedViewController: TransferStepViewController {
         isModalInPresentation = true
     }
     
-    @IBAction override func nextStep() {
+    override func nextStep() {
         performSegue(withID: "TransferAccepted_to_TransferStep1")
     }
 }
