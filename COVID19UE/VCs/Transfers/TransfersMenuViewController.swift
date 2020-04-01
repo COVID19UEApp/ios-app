@@ -95,7 +95,7 @@ class TransferMenuCell: UITableViewCell {
         deceasedLabel.text = transfer.mandate.deceased.name.full + ", " + (transfer.mandate.deceased.birthDate?.string(withFormat: "dd.MM.yyyy") ?? "")
         warningView.isShown = transfer.mandate.deceased.isContagious
         
-        transfer.currentAddress.getDistance { (distance) in
+        transfer.currentLocation.address.getDistance { (distance) in
             guard let distance = distance else { return }
             switch distance {
             case 0...999:

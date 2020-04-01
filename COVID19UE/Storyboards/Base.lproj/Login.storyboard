@@ -15,27 +15,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmH-Wr-9y1">
-                                <rect key="frame" x="247" y="752" width="83" height="30"/>
-                                <state key="normal" title="Registrieren"/>
-                                <connections>
-                                    <action selector="register" destination="q4O-UR-weS" eventType="touchUpInside" id="CTV-lN-2ot"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-Qk-Ojo">
-                                <rect key="frame" x="99" y="752" width="68" height="30"/>
-                                <state key="normal" title="Einloggen"/>
-                                <connections>
-                                    <action selector="login" destination="q4O-UR-weS" eventType="touchUpInside" id="xFk-Xd-kR0"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b5Z-li-ZWS">
+                                <rect key="frame" x="107" y="704" width="200" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmH-Wr-9y1" customClass="PrimaryButton" customModule="COVID19UE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
+                                        <state key="normal" title="Registrieren"/>
+                                        <connections>
+                                            <action selector="register" destination="q4O-UR-weS" eventType="touchUpInside" id="CTV-lN-2ot"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-Qk-Ojo" customClass="SecondaryButton" customModule="COVID19UE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="200" height="44"/>
+                                        <state key="normal" title="Einloggen"/>
+                                        <connections>
+                                            <action selector="login" destination="q4O-UR-weS" eventType="touchUpInside" id="xFk-Xd-kR0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zDl-Qk-Ojo" firstAttribute="trailing" secondItem="rdQ-bq-any" secondAttribute="centerX" constant="-40" id="6vU-N0-aTa"/>
-                            <constraint firstItem="WmH-Wr-9y1" firstAttribute="leading" secondItem="rdQ-bq-any" secondAttribute="centerX" constant="40" id="GzS-J8-ZCy"/>
-                            <constraint firstItem="WmH-Wr-9y1" firstAttribute="centerY" secondItem="zDl-Qk-Ojo" secondAttribute="centerY" id="aNK-ZJ-9t8"/>
-                            <constraint firstItem="d1I-Gd-bWr" firstAttribute="bottom" secondItem="zDl-Qk-Ojo" secondAttribute="bottom" constant="80" id="xIT-Rk-oWS"/>
+                            <constraint firstItem="d1I-Gd-bWr" firstAttribute="bottom" secondItem="b5Z-li-ZWS" secondAttribute="bottom" constant="50" id="NaD-1k-DEN"/>
+                            <constraint firstItem="b5Z-li-ZWS" firstAttribute="centerX" secondItem="rdQ-bq-any" secondAttribute="centerX" id="SMM-Oz-WRw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d1I-Gd-bWr"/>
                     </view>

@@ -15,6 +15,7 @@
 		884C4B1724335B0C00C5073F /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1624335B0C00C5073F /* PhoneNumber.swift */; };
 		884C4B192434810C00C5073F /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B182434810C00C5073F /* SecondaryButton.swift */; };
 		884C4B1B2434849500C5073F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1A2434849500C5073F /* PrimaryButton.swift */; };
+		884C4B1D2434869200C5073F /* TransferStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C4B1C2434869200C5073F /* TransferStep3ViewController.swift */; };
 		885CA8A6242E09C200CAC968 /* TransferAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */; };
 		886966302431EA380016C15A /* mapStyles-light.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 8869662F2431EA380016C15A /* mapStyles-light.geojson */; };
 		886966322431F3D70016C15A /* TransferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886966312431F3D70016C15A /* TransferDetailsViewController.swift */; };
@@ -63,6 +64,7 @@
 		884C4B1624335B0C00C5073F /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		884C4B182434810C00C5073F /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		884C4B1A2434849500C5073F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		884C4B1C2434869200C5073F /* TransferStep3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferStep3ViewController.swift; sourceTree = "<group>"; };
 		885CA8A5242E09C200CAC968 /* TransferAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferAnnotationView.xib; sourceTree = "<group>"; };
 		8869662F2431EA380016C15A /* mapStyles-light.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mapStyles-light.geojson"; sourceTree = "<group>"; };
 		886966312431F3D70016C15A /* TransferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetailsViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				889B627624323BAA00BCD0E1 /* TransferAcceptedViewController.swift */,
 				884C4B102433511600C5073F /* TransferStep1ViewController.swift */,
 				884C4B122433531600C5073F /* TransferStep2ViewController.swift */,
+				884C4B1C2434869200C5073F /* TransferStep3ViewController.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				88E4E741242D0FB8002B8E27 /* Extensions.swift in Sources */,
 				884C4B132433531600C5073F /* TransferStep2ViewController.swift in Sources */,
 				88E4E720242CD043002B8E27 /* Address.swift in Sources */,
+				884C4B1D2434869200C5073F /* TransferStep3ViewController.swift in Sources */,
 				884C4B112433511600C5073F /* TransferStep1ViewController.swift in Sources */,
 				88E4E718242CC56F002B8E27 /* User.swift in Sources */,
 				884C4B1724335B0C00C5073F /* PhoneNumber.swift in Sources */,

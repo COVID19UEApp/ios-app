@@ -70,5 +70,10 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>...um Ihren Standort auf der Karte anzuzeigen.</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+		<string>comgooglemaps-x-callback</string>
+	</array>
 </dict>
 </plist>

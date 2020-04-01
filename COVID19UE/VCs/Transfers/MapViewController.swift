@@ -21,6 +21,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     /// Determines whether the region has been set for the first time.
     var hasSetRegion: Bool = false
     
+    var mapRegionOffset: Int = -70
+    
     var shouldShowTransferDetails: (_ transfer: Transfer) -> Void = { _ in }
     
     override func viewDidLoad() {
@@ -46,7 +48,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude - 0.006, longitude: location.coordinate.longitude)
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude + (Double(mapRegionOffset) / 10_000), longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
         if !hasSetRegion {
             mapView.setRegion(region, animated: true)
@@ -114,7 +116,7 @@ fileprivate class TransferAnnotation: NSObject, MKAnnotation {
         
         super.init()
         
-        transfer.currentAddress.getCoordinate { (location) in
+        transfer.currentLocation.address.getCoordinate { (location) in
             guard let coord = location?.coordinate else { return }
             self.coordinate = coord
         }
@@ -137,7 +139,7 @@ class TransferAnnotationView: MKAnnotationView {
     func populate(for transfer: Transfer) {
         self.transfer = transfer
         
-        let a = transfer.currentAddress
+        let a = transfer.currentLocation.address
         titleLabel.text = a.institution ?? "\(a.street) \(a.house), \(a.city)"
     }
 }

@@ -19,7 +19,7 @@ class TransferStep1ViewController: TransferStepViewController {
     
     @IBAction func call() {
         nextButton.isShown = true
-        let contact = transfer.pickup.location.contact
+        let contact = transfer.currentLocation.contact
         contact.phone?.call { (call) in
             guard let call = call else {
                 return self.nextStep()
