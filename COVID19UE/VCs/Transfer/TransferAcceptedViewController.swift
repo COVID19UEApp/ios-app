@@ -15,6 +15,8 @@ class TransferAcceptedViewController: TransferStepViewController {
         
         // disables swipe down to dismiss view controller
         isModalInPresentation = true
+        
+        transfer.currentStep.status = .inProgress
     }
     
     override func nextStep() {

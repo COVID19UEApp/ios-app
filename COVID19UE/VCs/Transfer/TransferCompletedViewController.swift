@@ -13,11 +13,12 @@ class TransferCompletedViewController: TransferStepViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        transfer.currentStep.status = .completed
     }
     
     override func nextStep() { /* no next step, as this is the last one */ }
     
-    @IBAction override func dismiss() {
+    override func dismiss() {
         navigationController?.dismiss(animated: true)
     }
 }

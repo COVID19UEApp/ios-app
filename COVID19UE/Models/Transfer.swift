@@ -14,10 +14,23 @@ struct Transfer {
     var pickup: Pickup
     var steps: [TransferStep] = []
     
+    var currentStep: SuperTransferStep {
+        guard pickup.status == .completed else { return pickup }
+        for step in steps.sorted(by: \.index, <) {
+            if [.open, .inProgress].contains(step.status) {
+                return step
+            }
+        }
+        return pickup
+    }
+        
     /// Returns the current location of the deceased body.
     /// If a step is open or in progress, the start point of that step is returned.
     /// If no step has been completed, the pickup address of the transfer will be used.
     var currentLocation: Location {
+        guard pickup.status == .completed else {
+            return pickup.location
+        }
         for (i, step) in steps.sorted(by: \.index, <).enumerated() {
             if [.open, .inProgress].contains(step.status) {
                 if let previousStep = steps[safe: i-1] {

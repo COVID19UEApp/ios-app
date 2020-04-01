@@ -8,20 +8,38 @@
 
 import Foundation
 
-struct TransferStep {
-    var index: Int
-    var status: Status = .open
-    var destination: Location
-}
-
-struct Pickup {
-    var location: Location
-}
-
-extension TransferStep {
-    enum Status {
-        case open, inProgress, completed
+class SuperTransferStep {
+    var status: TransferStepStatus = .open
+    
+    init(status: TransferStepStatus) {
+        self.status = status
     }
+}
+
+class TransferStep: SuperTransferStep {
+    var index: Int
+    var destination: Location
+    
+    init(index: Int, status: TransferStepStatus = .open, destination: Location) {
+        self.index = index
+        self.destination = destination
+        
+        super.init(status: status)
+    }
+}
+
+class Pickup: SuperTransferStep {
+    var location: Location
+
+    init(status: TransferStepStatus = .open, location: Location) {
+        self.location = location
+        
+        super.init(status: status)
+    }
+}
+
+enum TransferStepStatus {
+    case open, inProgress, completed
 }
 
 

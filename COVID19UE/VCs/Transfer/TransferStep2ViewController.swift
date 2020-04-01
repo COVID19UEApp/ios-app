@@ -18,10 +18,4 @@ class TransferStep2ViewController: TransferStepViewController {
         super.viewDidLoad()
         
     }
-    
-    override func nextStep() {
-        super.nextStep()
-        
-        // TODO: set status to in-progress
-    }
 }
